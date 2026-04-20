@@ -1,81 +1,71 @@
-# SmoothConv
+# SmoothConv: A Dual-Channel Conversational Dataset for Smooth Human–AI Interaction
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-COLOR.svg)]()  [![hf](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/lisongqualialabs/SmoothConv/tree/main)  [![GitHub](https://img.shields.io/badge/GitHub-Repo-green)](https://github.com/qualialabsAI/SmoothConv)
 
-SmoothConv is a research initiative focused on advancing natural and smooth human–AI conversational interaction.
+This is the official repository for the **SmoothConv** dataset.
 
-Our initial release introduces a high-quality, dual-channel dataset of real human–human conversations, designed specifically for modeling conversational turn-taking and interaction flow.
+**SmoothConv** is a high-quality dual-channel conversational dataset designed for research on natural and smooth human–AI interaction. The initial release focuses on real human–human conversations with fine-grained conversational structure preserved in timing, overlap, and turn boundaries, providing a natural foundation for modeling turn-taking, interruption handling, response timing, and interaction dynamics in spoken interactive systems.
 
-Unlike many existing resources that rely on single-channel recordings or scripted dialogues, SmoothConv provides:
+Unlike many existing conversational resources that rely on single-channel mixed recordings, scripted dialogues, or artificially designed scenarios, SmoothConv provides:
 
-- Dual-channel recordings capturing both speakers independently  
-- Naturally occurring, unscripted conversations  
-- Precise conversational structure preserved in timing and overlap  
+- true dual-channel recordings with separate speaker tracks;
+- naturally occurring, unscripted conversations; and
+- fine-grained annotations of conversational structure and paralinguistic events.
 
-This enables fine-grained research on turn-taking, interruption modeling, response timing, and interaction dynamics.
-
----
-
-## 🚀 What Makes SmoothConv Different
-
-### 1. Real Dual-Channel Conversations
-
-Most publicly available conversational datasets are:
-
-- Single-channel mixed audio  
-- Scripted or read dialogues  
-- Artificially constructed conversational scenarios  
-
-SmoothConv instead offers:
-
-- True dual-channel recordings (separate speaker tracks)  
-- Naturally occurring conversations  
-- Authentic interaction timing and overlap patterns  
-
-This makes it particularly suitable for modeling conversational flow and real-world dialogue coordination.
+This makes SmoothConv particularly suitable for building and evaluating systems for conversational turn-taking and real-time spoken interaction.
 
 ---
 
-### 2. Human-Curated Fine-Grained Annotations
+## News 🔥
 
-All data in the initial release is manually annotated with high precision, including:
-
-- Speaker IDs  
-- Accurate timestamps  
-- Turn segmentation  
-- Paralinguistic signals (e.g., pauses, overlaps, backchannels)  
-
-The dataset is designed for reproducible research and structured modeling of interaction dynamics.
+- **2025/04/06**: We release the **FastTurn Test Set**, built upon the **SmoothConv small set**, for turn-state prediction and evaluation.
+- **2025/03/24**: Initial public release of the **SmoothConv small set**.
 
 ---
 
-## 📦 Initial Release
+## Download
 
-The first public release includes:
-
-- Annotated dual-channel conversational audio  
-- Structured metadata for reproducible training  
-- Detailed annotation schema and documentation  
-- Standard experimental splits  
+Comming soon.
 
 ---
 
-## 🔜 Upcoming Releases
+## Overview ⭐️
 
-SmoothConv will progressively expand to include:
+This is the official repository for the **SmoothConv** dataset.
 
-- Larger-scale conversational datasets  
-- Richer side annotations and interaction cues  
-- Benchmark tasks for interaction modeling  
-- Baseline and reference models  
+**SmoothConv** is a dual-channel conversational dataset built from real human–human conversations, with the goal of supporting research on natural and smooth human–AI interaction. It preserves fine-grained conversational structure, including timing, overlap, and turn boundaries, and therefore provides a realistic basis for modeling turn-taking, interruption handling, response timing, and interaction dynamics in spoken interactive systems.
 
-Our long-term goal is to provide foundational resources for natural and adaptive human–AI interaction systems.
+Compared with many existing conversational resources that rely on single-channel mixed audio, scripted dialogues, or artificially constructed scenarios, SmoothConv provides:
+
+- true dual-channel recordings with separate speaker tracks;
+- naturally occurring, unscripted conversations; and
+- fine-grained annotations of conversational structure and paralinguistic events.
+
+These properties make SmoothConv a useful resource for building and evaluating systems for conversational turn-taking and real-time spoken interaction.
 
 ---
 
-## 📂 Repository Structure
+## Dataset Statistics 📦
 
-metadata/        # Manifest files and dataset splits  
-docs/            # Annotation guidelines and documentation  
-sample/          # Sample data for quick inspection  
+### SmoothConv
+
+The final release of **SmoothConv** will include approximately **150 hours** of real-world conversational audio. Broadly, the dataset is divided into two categories: **educational** and **non-educational** conversations. To support turn-taking research, the dataset further includes four turn-taking labels: **complete**, **incomplete**, **backchannel**, and **wait**. More detailed statistics, annotation protocols, and data descriptions will be released together with the full dataset.
+<!-- 
+| Split | # Conversations | Duration (hours) | 
+|:-----:|----------------:|-----------------:|
+| Total | XXX | XXX | XXX | XXX | XXX | XXX | -->
+
+### FastTurn Test Set
+
+To evaluate turn-state prediction, we construct an evaluation set consisting of segments from real-world data and 1,000 synthetically generated **wait** state samples. Since the **wait** state is rare in natural conversations, we supplement the set with synthesized samples generated using DeepSeek V3 for text generation and IndexTTS2 for audio synthesis.
+
+| Turn State  | Source      | Samples | Duration (h) |
+|-------------|-------------|--------:|-------------:|
+| Complete    | real-world  | 14709   | 9.64         |
+| Incomplete  | real-world  | 3643    | 2.15         |
+| Backchannel | real-world  | 3080    | 0.42         |
+| Wait        | synthesized | 1000    | 0.71         |
+
+For more details about the FastTurn Test Set, please refer to the [FastTurn repository](https://github.com/ASLP-lab/FastTurn).
 
 ---
 
