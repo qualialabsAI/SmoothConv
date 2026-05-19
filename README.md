@@ -24,7 +24,6 @@ This makes SmoothConv particularly suitable for building and evaluating systems 
 
 ## Download
 
-# Download
 
 The FastTurn Testset is available at:
 [https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
