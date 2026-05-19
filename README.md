@@ -17,14 +17,17 @@ This makes SmoothConv particularly suitable for building and evaluating systems 
 
 ## News 🔥
 
-- **2025/04/06**: We release the **FastTurn Test Set**, built upon the **SmoothConv small set**, for turn-state prediction and evaluation.
+- **2025/04/06**: We release the **[FastTurn Test Set](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)**, built upon the **SmoothConv small set**, for turn-state prediction and evaluation.
 - **2025/03/24**: Initial public release of the **SmoothConv small set**.
 
 ---
 
 ## Download
 
-Comming soon.
+# Download
+
+The FastTurn Testset is available at:
+[https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
 
 ---
 
