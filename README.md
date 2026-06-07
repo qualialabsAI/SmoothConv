@@ -1,6 +1,6 @@
 # SmoothConv & DuplexConv: Twin Conversational Datasets for Full-Duplex Human–AI Interaction
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-COLOR.svg)]()   [![hf](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow)]()   [![GitHub](https://img.shields.io/badge/GitHub-Repo-green)](https://github.com/qualialabsAI/SmoothConv)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-COLOR.svg)]()   [![hf](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/qualialabsAI)   [![GitHub](https://img.shields.io/badge/GitHub-Repo-green)](https://github.com/qualialabsAI/SmoothConv)
 
 This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by the **ASLP Laboratory of Northwestern Polytechnical University (NWPU)** and **Shanghai Vocal Matrix Technology Co., Ltd.**
 
@@ -18,8 +18,8 @@ This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-f
 
 ## Download 📥
 
-* **SmoothConv (100h / Expert-Annotated)**: [HuggingFace Dataset Link]
-* **DuplexConv (2,000h / LLM-Annotated)**: [HuggingFace Dataset Link]
+* **SmoothConv (100h / Expert-Annotated)**: [SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)
+* **DuplexConv (2,000h / LLM-Annotated)**: [DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)
 * **FastTurn Testset**: [FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
 
 ---
