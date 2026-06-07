@@ -10,7 +10,7 @@ This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-f
 
 ## News 🔥
 
-- **2026/06**: 🚀 We officially open-source the full **SmoothConv (100h human-verified)** and **DuplexConv (2,000h LLM-annotated)** twin datasets.
+- **2026/06**: 🚀 We officially open-source the full **[SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)** and **[DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)** twin datasets.
 - **2025/04/06**: Released the **[FastTurn Test Set](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)**, built upon the SmoothConv small set, for turn-state prediction evaluation.
 - **2025/03/24**: Initial public release of the SmoothConv small set.
 
@@ -18,8 +18,8 @@ This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-f
 
 ## Download 📥
 
-* **SmoothConv (100h / Expert-Annotated)**: [SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)
-* **DuplexConv (2,000h / LLM-Annotated)**: [DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)
+* **SmoothConv**: [SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)
+* **DuplexConv **: [DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)
 * **FastTurn Testset**: [FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
 
 ---
