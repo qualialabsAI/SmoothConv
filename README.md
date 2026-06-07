@@ -1,48 +1,72 @@
-# SmoothConv: A Dual-Channel Conversational Dataset for Smooth Human–AI Interaction
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-COLOR.svg)]()  [![hf](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow)]()  [![GitHub](https://img.shields.io/badge/GitHub-Repo-green)](https://github.com/qualialabsAI/SmoothConv)
+# SmoothConv & DuplexConv: Twin Conversational Datasets for Full-Duplex Human–AI Interaction
 
-This is the official repository for the **SmoothConv** dataset.
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-COLOR.svg)]()   [![hf](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow)]()   [![GitHub](https://img.shields.io/badge/GitHub-Repo-green)](https://github.com/qualialabsAI/SmoothConv)
 
-**SmoothConv** is a high-quality dual-channel conversational dataset designed for research on natural and smooth human–AI interaction. The initial release focuses on real human–human conversations with fine-grained conversational structure preserved in timing, overlap, and turn boundaries, providing a natural foundation for modeling turn-taking, interruption handling, response timing, and interaction dynamics in spoken interactive systems.
+This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by the **ASLP Laboratory of Northwestern Polytechnical University (NWPU)** and **Shanghai Vocal Matrix Technology Co., Ltd.**
 
-Unlike many existing conversational resources that rely on single-channel mixed recordings, scripted dialogues, or artificially designed scenarios, SmoothConv provides:
-
-- true dual-channel recordings with separate speaker tracks;
-- naturally occurring, unscripted conversations; and
-- fine-grained annotations of conversational structure and paralinguistic events.
-
-This makes SmoothConv particularly suitable for building and evaluating systems for conversational turn-taking and real-time spoken interaction.
+This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-form conversational audio. It is specifically designed to advance research on next-generation Speech LLMs and full-duplex spoken dialogue systems—enabling models to achieve human-like turn-taking, real-time interruption handling, and continuous stream perception.
 
 ---
 
 ## News 🔥
 
-- **2025/04/06**: We release the **[FastTurn Test Set](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)**, built upon the **SmoothConv small set**, for turn-state prediction and evaluation.
-- **2025/03/24**: Initial public release of the **SmoothConv small set**.
+- **2026/06**: 🚀 We officially open-source the full **SmoothConv (100h human-verified)** and **DuplexConv (2,000h LLM-annotated)** twin datasets.
+- **2025/04/06**: Released the **[FastTurn Test Set](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)**, built upon the SmoothConv small set, for turn-state prediction evaluation.
+- **2025/03/24**: Initial public release of the SmoothConv small set.
 
 ---
 
-## Download
+## Download 📥
 
-
-The FastTurn Testset is available at:
-[FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
+* **SmoothConv (100h / Expert-Annotated)**: [HuggingFace Dataset Link]
+* **DuplexConv (2,000h / LLM-Annotated)**: [HuggingFace Dataset Link]
+* **FastTurn Testset**: [FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
 
 ---
 
-## Overview ⭐️
+## Dataset Overview ⭐️
 
-This is the official repository for the **SmoothConv** dataset.
+Unlike traditional speech corpora that rely on studio readings, single-channel mixed tracks, or scripted scenarios, this suite features **true multi-channel recordings of real-world, unscripted Chinese natural conversations** (covering deep educational verticals and open-domain interactions). 
 
-**SmoothConv** is a dual-channel conversational dataset built from real human–human conversations, with the goal of supporting research on natural and smooth human–AI interaction. It preserves fine-grained conversational structure, including timing, overlap, and turn boundaries, and therefore provides a realistic basis for modeling turn-taking, interruption handling, response timing, and interaction dynamics in spoken interactive systems.
+The suite provides two complementary annotation modes from identical or cognate natural conversation sources to serve both fine-tuning and large-scale pre-training:
 
-Compared with many existing conversational resources that rely on single-channel mixed audio, scripted dialogues, or artificially constructed scenarios, SmoothConv provides:
+### 1️⃣ SmoothConv (100 Hours — Expert Human Annotation)
+Designed as a high-precision interactive benchmark and fine-tuning asset. It captures micro-dynamics of human interaction through dense, multi-dimensional human verification:
+- **Millisecond-level Segment Alignment**: High-accuracy ASR transcripts aligned perfectly at the segment/turn boundaries.
+- **Turn-taking & Overlap Dynamics**: Clear markings of speaker transitions and speech overlaps, essential for modeling endpoint detection (VAD) and turn prediction.
+- **Acoustic Events & Pauses**: Granular labels for non-verbal behaviors like laughter, coughing, sighing, and pauses.
+- **Fine-grained Attributes**: Explicit tags for speaker gender and dynamic emotional states.
 
-- true dual-channel recordings with separate speaker tracks;
-- naturally occurring, unscripted conversations; and
-- fine-grained annotations of conversational structure and paralinguistic events.
+### 2️⃣ DuplexConv (2,000 Hours — Large-scale LLM Automation)
+Built to satisfy the massive data appetite of Speech LLM pre-training. It leverages a cutting-edge data engineering pipeline driven by advanced LLMs to generate extensive training data:
+- **Massive Pre-training Supply**: 2,000 hours of natural multi-turn context for robust speech representation and Self-Supervised Learning (SSL).
+- **Rich Paralinguistic Enrichment**: Automated deep semantic and multi-modal environment parsing, delivering global atmosphere, vocal tones, and emotional undertones.
 
-These properties make SmoothConv a useful resource for building and evaluating systems for conversational turn-taking and real-time spoken interaction.
+---
+
+## Dataset Statistics 📦
+
+### Global Overview
+
+| Metrics | 🥇 SmoothConv (Human Fine-Tuning) | 🥈 DuplexConv (LLM Pre-Training) |
+| :--- | :---: | :---: |
+| **Language** | Chinese (zh) | Chinese (zh) |
+| **Total Audio Duration** | **100.53 hours** | **2000.21 hours** |
+| **Total Audio Files** | 2,503 | 93,709 |
+| **Mean Duration** | 144.59 sec | 76.84 sec |
+| **Duration Range (Min - Max)** | 60.0 sec - 634.7 sec | 8.0 sec - 618.3 sec |
+
+### FastTurn Test Set
+To evaluate turn-state prediction, we construct a dedicated evaluation set consisting of segments from real-world data and 1,000 synthetically generated **wait** state samples (synthesized using DeepSeek V3 for text and IndexTTS2 for audio).
+
+| Turn State  | Source      | Samples | Duration (h) |
+|-------------|-------------|--------:|-------------:|
+| Complete    | real-world  | 14709   | 9.64         |
+| Incomplete  | real-world  | 3643    | 2.15         |
+| Backchannel | real-world  | 3080    | 0.42         |
+| Wait        | synthesized | 1000    | 0.71         |
+
+For more details, please refer to the [FastTurn repository](https://github.com/ASLP-lab/FastTurn).
 
 ---
 
