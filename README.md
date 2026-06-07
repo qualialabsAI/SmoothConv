@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-COLOR.svg)]()   [![hf](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/qualialabsAI)   [![GitHub](https://img.shields.io/badge/GitHub-Repo-green)](https://github.com/qualialabsAI/SmoothConv)
 
-This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by the **ASLP Laboratory of Northwestern Polytechnical University (NWPU)** and **Shanghai Vocal Matrix Technology Co., Ltd.**
+This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by the **ASLP Laboratory of Northwestern Polytechnical University (NWPU)** and **QualiaLabs.**
 
 This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-form conversational audio. It is specifically designed to advance research on next-generation Speech LLMs and full-duplex spoken dialogue systems—enabling models to achieve human-like turn-taking, real-time interruption handling, and continuous stream perception.
 
