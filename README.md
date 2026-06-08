@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href=""><img src="https://img.shields.io/badge/arXiv-Paper-COLOR.svg" alt="arXiv"></a>
   <a href="https://huggingface.co/datasets/qualialabsAI"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow" alt="HuggingFace"></a>
   <a href="https://github.com/qualialabsAI/SmoothConv"><img src="https://img.shields.io/badge/GitHub-Repo-green" alt="GitHub"></a>
 </p>
