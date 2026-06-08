@@ -215,15 +215,14 @@
 
 		.compare-panel {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 1px;
-			background: var(--line);
-			border: 1px solid var(--line);
+			grid-template-columns: 1fr;
+			gap: 1.25rem;
 		}
 
 		.dataset-panel {
 			background: var(--paper);
 			padding: 1.25rem 1.25rem 1rem;
+			border: 1px solid var(--line);
 		}
 
 		.panel-title {
@@ -263,8 +262,8 @@
 
 		.video-row {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: .75rem;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1rem;
 		}
 
 		.sample-fig {
@@ -402,7 +401,7 @@
 			.hero-zh { font-size: 0.9375rem; }
 			.nav-links a { padding: 0.2rem 0.55rem; font-size: 13px; }
 			.section-head h2 { font-size: 1.3rem; }
-			.compare-panel { grid-template-columns: 1fr; }
+			.compare-panel { gap: 1rem; }
 			.video-row { grid-template-columns: 1fr; }
 			.stat-row { grid-template-columns: 1fr; }
 			.overview-table th { width: 36%; }
