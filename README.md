@@ -1,4 +1,4 @@
-# SmoothConv & DuplexConv: Twin Conversational Datasets for Full-Duplex Human–AI Interaction
+# Full-Duplex Chinese speech datasets for Conversational AI
 
 <p align="center">
   <img src="figs/SD.png" alt="SmoothConv & DuplexConv" width="480">
@@ -38,21 +38,21 @@ This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-f
 
 ## Dataset Overview ⭐️
 
-Unlike traditional speech corpora that rely on studio readings, single-channel mixed tracks, or scripted scenarios, this suite features **true multi-channel recordings of real-world, unscripted Chinese natural conversations** (covering deep educational verticals and open-domain interactions). 
+Unlike traditional speech corpora that rely on studio readings, single-channel mixed tracks, or scripted scenarios, this suite features **true multi-channel recordings of real-world, unscripted Chinese natural conversations** (covering **education** and **casual chat**). 
 
 The suite provides two complementary annotation modes from identical or cognate natural conversation sources to serve both fine-tuning and large-scale pre-training:
 
 ### 1️⃣ SmoothConv (100 Hours — Expert Human Annotation)
-Designed as a high-precision interactive benchmark and fine-tuning asset. It captures micro-dynamics of human interaction through dense, multi-dimensional human verification:
-- **Millisecond-level Segment Alignment**: High-accuracy ASR transcripts aligned perfectly at the segment/turn boundaries.
-- **Turn-taking & Overlap Dynamics**: Clear markings of speaker transitions and speech overlaps, essential for modeling endpoint detection (VAD) and turn prediction.
-- **Acoustic Events & Pauses**: Granular labels for non-verbal behaviors like laughter, coughing, sighing, and pauses.
-- **Fine-grained Attributes**: Explicit tags for speaker gender and dynamic emotional states.
+A high-precision dataset for fine-tuning and benchmarking full-duplex dialogue models. Human annotators label real multi-party Chinese conversations with:
+- **Aligned transcripts**: ASR text with millisecond-level timestamps at segment and turn boundaries.
+- **Turn-taking & overlap**: When speakers switch, overlap, or hold the floor—key signals for endpoint detection (VAD) and turn prediction.
+- **Pauses & sound events**: Laughter, coughs, breaths, background noise, and silence.
+- **Speaker attributes**: Gender and emotion tags per segment.
 
-### 2️⃣ DuplexConv (2,000 Hours — Large-scale LLM Automation)
-Built to satisfy the massive data appetite of Speech LLM pre-training. It leverages a cutting-edge data engineering pipeline driven by advanced LLMs to generate extensive training data:
-- **Massive Pre-training Supply**: 2,000 hours of natural multi-turn context for robust speech representation and Self-Supervised Learning (SSL).
-- **Rich Paralinguistic Enrichment**: Automated deep semantic and multi-modal environment parsing, delivering global atmosphere, vocal tones, and emotional undertones.
+### 2️⃣ DuplexConv (2,000 Hours — LLM-Assisted Annotation at Scale)
+DuplexConv uses the **same natural conversation sources** as SmoothConv, but at much larger scale (~2,000 hours). Instead of manual labeling, an **automated LLM pipeline** annotates long audio with transcripts, turn structure, and scene-level context—supplying the data volume needed for Speech LLM pre-training.
+- **Scale for pre-training**: ~2,000 hours of multi-turn Chinese dialogue for representation learning and large-model training.
+- **Automated labels**: Machine-generated annotations for dialogue content, speaker tone, emotional atmosphere, and conversational context.
 
 ---
 
@@ -86,7 +86,7 @@ For more details, please refer to the [FastTurn repository](https://github.com/A
 
 ### SmoothConv
 
-The final release of **SmoothConv** will include approximately **150 hours** of real-world conversational audio. Broadly, the dataset is divided into two categories: **educational** and **non-educational** conversations. To support turn-taking research, the dataset further includes four turn-taking labels: **complete**, **incomplete**, **backchannel**, and **wait**. More detailed statistics, annotation protocols, and data descriptions will be released together with the full dataset.
+The final release of **SmoothConv** will include approximately **150 hours** of real-world conversational audio. Broadly, the dataset is divided into two categories: **education** and **casual chat**. To support turn-taking research, the dataset further includes four turn-taking labels: **complete**, **incomplete**, **backchannel**, and **wait**. More detailed statistics, annotation protocols, and data descriptions will be released together with the full dataset.
 <!-- 
 | Split | # Conversations | Duration (hours) | 
 |:-----:|----------------:|-----------------:|

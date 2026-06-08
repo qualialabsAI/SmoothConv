@@ -4,13 +4,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="SmoothConv & DuplexConv — 面向全双工语音交互的中文自然对话数据集可视化展示与标注样例。">
+	<meta name="description" content="Full-Duplex Chinese speech datasets for Conversational AI — SmoothConv & DuplexConv demo: annotation samples and dataset statistics.">
 	<meta property="og:image" content="figs/SD.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<title>SmoothConv & DuplexConv</title>
+	<title>Full-Duplex Chinese speech datasets for Conversational AI</title>
 	<style>
 		:root {
 			--bg: #f4f5f7;
@@ -140,6 +140,42 @@
 			text-align: center;
 			max-width: 600px;
 			margin: 0 auto 2.5rem;
+		}
+
+		.abstract {
+			max-width: 760px;
+			margin: 0 auto 2.5rem;
+			padding: 1.5rem 1.75rem;
+			background: var(--paper);
+			border: 1px solid var(--line);
+			border-radius: 8px;
+		}
+
+		.abstract h2 {
+			font-family: "Source Serif 4", "Noto Serif SC", serif;
+			font-size: 1rem;
+			font-weight: 600;
+			color: var(--ink);
+			margin: 0 0 0.85rem;
+			text-align: center;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		.abstract p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 1.75;
+			color: var(--muted);
+		}
+
+		.abstract p + p {
+			margin-top: 0.85rem;
+		}
+
+		.abstract-zh {
+			padding-top: 0.85rem;
+			border-top: 1px solid var(--line);
 		}
 
 		.section {
@@ -415,8 +451,8 @@
 	<div class="header-shell">
 		<div class="hero-visual" role="img" aria-label="SmoothConv & DuplexConv"></div>
 		<div class="hero-caption">
-			<h1 class="hero-en">Twin Conversational Datasets for Full-Duplex Human–AI Interaction</h1>
-			<p class="hero-zh">面向全双工语音交互的 2100+ 小时中文自然对话数据集</p>
+			<h1 class="hero-en">Full-Duplex Chinese speech datasets for Conversational AI</h1>
+			<p class="hero-zh">SmoothConv &amp; DuplexConv · 2100+ 小时中文自然对话数据</p>
 			<p class="hero-org">ASLP Laboratory, Northwestern Polytechnical University · QualiaLabs</p>
 			<nav class="nav-links">
 				<a href="#samples">标注样例</a>
@@ -430,19 +466,28 @@
 
 <main class="page">
 
-	<p class="lead">
-		标注可视化样例与数据分布统计。
-	</p>
+	<div class="abstract">
+		<h2>Abstract</h2>
+		<p>
+			<strong>SmoothConv</strong> and <strong>DuplexConv</strong> are open-source twin datasets of real-world, unscripted Chinese conversations (2,100+ hours), built for full-duplex spoken dialogue and Speech LLM research. Recorded in multi-channel settings across <strong>education</strong> and <strong>casual chat</strong>, they capture natural turn-taking, overlaps, pauses, and paralinguistic events—not studio readings or scripted speech.
+		</p>
+		<p>
+			<strong>SmoothConv</strong> (100h) offers expert human annotations for fine-tuning and evaluation. <strong>DuplexConv</strong> (2,000h) applies an LLM labeling pipeline at scale for pre-training. This page provides annotation sample videos and dataset distribution charts.
+		</p>
+		<p class="abstract-zh">
+			SmoothConv 与 DuplexConv 是面向全双工口语对话与语音大模型研究的开源中文自然对话数据集，涵盖教育与闲聊场景，保留真实话轮切换、重叠、停顿与副语言信息。SmoothConv 侧重人工精标微调，DuplexConv 侧重大规模自动标注预训练。
+		</p>
+	</div>
 
 	<!-- samples -->
 	<section class="section" id="samples">
 		<div class="section-head">
 			<h2>标注样例</h2>
-			<p>SmoothConv 与 DuplexConv 在教育垂类与通用领域下的标注可视化样例。</p>
+			<p>SmoothConv 与 DuplexConv 在教育与闲聊场景下的标注可视化样例。</p>
 		</div>
 
 		<div class="domain-group">
-			<div class="domain-label">教育垂类</div>
+			<div class="domain-label">教育</div>
 			<div class="compare-panel">
 				<div class="dataset-panel smooth">
 					<div class="panel-title">
@@ -488,7 +533,7 @@
 		</div>
 
 		<div class="domain-group">
-			<div class="domain-label">通用领域</div>
+			<div class="domain-label">闲聊</div>
 			<div class="compare-panel">
 				<div class="dataset-panel smooth">
 					<div class="panel-title">
