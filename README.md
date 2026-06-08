@@ -107,6 +107,12 @@ For more details about the FastTurn Test Set, please refer to the [FastTurn repo
 
 ---
 
+## Contact
+
+For questions or collaboration, please contact: [jimz@qualialabs.ai](mailto:jimz@qualialabs.ai)
+
+---
+
 ## 📜 License
 
 This dataset is released under the Creative Commons Attribution 4.0 International (CC-BY 4.0) License.
