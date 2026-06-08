@@ -1,4 +1,4 @@
-# Full-Duplex Chinese speech datasets for Conversational AI
+# SmoothConv & DuplexConv: Full-Duplex Chinese speech datasets for Conversational AI
 
 <p align="center">
   <img src="figs/SD.png" alt="SmoothConv & DuplexConv" width="480">
@@ -10,122 +10,109 @@
   <a href="https://github.com/qualialabsAI/SmoothConv"><img src="https://img.shields.io/badge/GitHub-Repo-green" alt="GitHub"></a>
 </p>
 
-This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by the **ASLP Laboratory of Northwestern Polytechnical University (NWPU)** and **QualiaLabs.**
+This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by **ASLP@NPU** and **QualiaLabs**.
 
-This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-form conversational audio. It is specifically designed to advance research on next-generation Speech LLMs and full-duplex spoken dialogue systems—enabling models to achieve human-like turn-taking, real-time interruption handling, and continuous stream perception.
+This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-form conversational audio. It is designed to advance research on Speech LLMs and full-duplex spoken dialogue systems—enabling models to achieve human-like turn-taking, real-time interruption handling, and continuous stream perception.
 
 <p align="center">
-  👉 <strong><a href="https://qualialabsai.github.io/SmoothConv">Demo Page</a></strong> — Annotation sample videos and dataset distribution for SmoothConv &amp; DuplexConv.
+  <strong><a href="https://qualialabsai.github.io/SmoothConv">Demo Page</a></strong> — Annotation sample videos and dataset distribution charts.
 </p>
 
 ---
 
-## News 🔥
+## News
 
-- **2026/06**: 🚀 We officially open-source the full **[SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)** and **[DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)** twin datasets.
-- **2025/04/06**: Released the **[FastTurn Test Set](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)**, built upon the SmoothConv small set, for turn-state prediction evaluation.
-- **2025/03/24**: Initial public release of the SmoothConv small set.
-
----
-
-## Download 📥
-
-* **SmoothConv**: [SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)
-* **DuplexConv**: [DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)
-* **FastTurn Testset**: [FastTurn-Testset](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
+- **2026/06**: Official open-source release of **[SmoothConv](https://huggingface.co/datasets/qualialabsAI/SmoothConv)** (100h) and **[DuplexConv](https://huggingface.co/datasets/qualialabsAI/DuplexConv)** (2,000h).
+- **2025/04/06**: Released the **[FastTurn Test Set](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)**, constructed from a subset of SmoothConv data, for turn-state prediction evaluation.
 
 ---
 
-## Dataset Overview ⭐️
+## Download
 
-Unlike traditional speech corpora that rely on studio readings, single-channel mixed tracks, or scripted scenarios, this suite features **true multi-channel recordings of real-world, unscripted Chinese natural conversations** (covering **education** and **casual chat**). 
+* **SmoothConv**: [HuggingFace](https://huggingface.co/datasets/qualialabsAI/SmoothConv)
+* **DuplexConv**: [HuggingFace](https://huggingface.co/datasets/qualialabsAI/DuplexConv)
+* **FastTurn Test Set**: [HuggingFace](https://huggingface.co/datasets/ASLP-lab/FastTurn-Testset)
 
-The suite provides two complementary annotation modes from identical or cognate natural conversation sources to serve both fine-tuning and large-scale pre-training:
+---
 
-### 1️⃣ SmoothConv (100 Hours — Expert Human Annotation)
+## Dataset Overview
+
+Unlike traditional speech corpora built from studio readings, single-channel mixes, or scripted scenarios, this suite provides **multi-channel recordings of real-world, unscripted Chinese conversations** in **Tutoring** and **Social Chat** settings.
+
+Two complementary annotation modes are derived from the same or closely related conversation sources—one for fine-tuning and benchmarking, one for large-scale pre-training:
+
+### SmoothConv (100 Hours — Expert Human Annotation)
+
 A high-precision dataset for fine-tuning and benchmarking full-duplex dialogue models. Human annotators label real multi-party Chinese conversations with:
+
 - **Aligned transcripts**: ASR text with millisecond-level timestamps at segment and turn boundaries.
-- **Turn-taking & overlap**: When speakers switch, overlap, or hold the floor—key signals for endpoint detection (VAD) and turn prediction.
+- **Turn-taking & overlap**: Speaker switches, overlaps, and floor-holding—key signals for VAD and turn prediction.
 - **Pauses & sound events**: Laughter, coughs, breaths, background noise, and silence.
 - **Speaker attributes**: Gender and emotion tags per segment.
 
-### 2️⃣ DuplexConv (2,000 Hours — LLM-Assisted Annotation at Scale)
-DuplexConv uses the **same natural conversation sources** as SmoothConv, but at much larger scale (~2,000 hours). Instead of manual labeling, an **automated LLM pipeline** annotates long audio with transcripts, turn structure, and scene-level context—supplying the data volume needed for Speech LLM pre-training.
-- **Scale for pre-training**: ~2,000 hours of multi-turn Chinese dialogue for representation learning and large-model training.
-- **Automated labels**: Machine-generated annotations for dialogue content, speaker tone, emotional atmosphere, and conversational context.
+### DuplexConv (2,000 Hours — LLM-Assisted Annotation at Scale)
+
+DuplexConv draws from the **same natural conversation sources** as SmoothConv at much larger scale (~2,000 hours). An **automated LLM pipeline** produces transcripts, turn structure, and scene-level context labels—providing the volume needed for Speech LLM pre-training.
+
+- **Scale for pre-training**: ~2,000 hours of multi-turn Chinese dialogue.
+- **Automated labels**: Dialogue content, speaker tone, emotional atmosphere, and conversational context.
 
 ---
 
-## Dataset Statistics 📦
+## Dataset Statistics
 
 ### Global Overview
 
-| Metrics | 🥇 SmoothConv (Human Fine-Tuning) | 🥈 DuplexConv (LLM Pre-Training) |
+| Metrics | SmoothConv (Human Annotation) | DuplexConv (LLM Annotation) |
 | :--- | :---: | :---: |
 | **Language** | Chinese (zh) | Chinese (zh) |
 | **Total Audio Duration** | **100.53 hours** | **2000.21 hours** |
 | **Total Audio Files** | 2,503 | 93,709 |
 | **Mean Duration** | 144.59 sec | 76.84 sec |
-| **Duration Range (Min - Max)** | 60.0 sec - 634.7 sec | 8.0 sec - 618.3 sec |
-
-### FastTurn Test Set
-To evaluate turn-state prediction, we construct a dedicated evaluation set consisting of segments from real-world data and 1,000 synthetically generated **wait** state samples (synthesized using DeepSeek V3 for text and IndexTTS2 for audio).
-
-| Turn State  | Source      | Samples | Duration (h) |
-|-------------|-------------|--------:|-------------:|
-| Complete    | real-world  | 14709   | 9.64         |
-| Incomplete  | real-world  | 3643    | 2.15         |
-| Backchannel | real-world  | 3080    | 0.42         |
-| Wait        | synthesized | 1000    | 0.71         |
-
-For more details, please refer to the [FastTurn repository](https://github.com/ASLP-lab/FastTurn).
-
----
-
-## Dataset Statistics 📦
+| **Duration Range** | 60.0 – 634.7 sec | 8.0 – 618.3 sec |
+| **Domains** | Tutoring, Social Chat | Tutoring, Social Chat |
 
 ### SmoothConv
 
-The final release of **SmoothConv** will include approximately **150 hours** of real-world conversational audio. Broadly, the dataset is divided into two categories: **education** and **casual chat**. To support turn-taking research, the dataset further includes four turn-taking labels: **complete**, **incomplete**, **backchannel**, and **wait**. More detailed statistics, annotation protocols, and data descriptions will be released together with the full dataset.
-<!-- 
-| Split | # Conversations | Duration (hours) | 
-|:-----:|----------------:|-----------------:|
-| Total | XXX | XXX | XXX | XXX | XXX | XXX | -->
+The current open-source release contains **100.53 hours** of conversational audio across **Tutoring** and **Social Chat**. Turn-taking labels include **complete**, **incomplete**, **backchannel**, and **wait**.
 
 ### FastTurn Test Set
 
-To evaluate turn-state prediction, we construct an evaluation set consisting of segments from real-world data and 1,000 synthetically generated **wait** state samples. Since the **wait** state is rare in natural conversations, we supplement the set with synthesized samples generated using DeepSeek V3 for text generation and IndexTTS2 for audio synthesis.
+A dedicated evaluation set for turn-state prediction, built from a subset of SmoothConv data. It combines real-world segments with 1,000 synthetically generated **wait** samples (text via DeepSeek V3, audio via IndexTTS2). Since **wait** is rare in natural speech, synthetic samples supplement the set.
 
-| Turn State  | Source      | Samples | Duration (h) |
-|-------------|-------------|--------:|-------------:|
-| Complete    | real-world  | 14709   | 9.64         |
-| Incomplete  | real-world  | 3643    | 2.15         |
-| Backchannel | real-world  | 3080    | 0.42         |
-| Wait        | synthesized | 1000    | 0.71         |
+| Turn State | Source | Samples | Duration (h) |
+|------------|--------|--------:|-------------:|
+| Complete | real-world | 14,709 | 9.64 |
+| Incomplete | real-world | 3,643 | 2.15 |
+| Backchannel | real-world | 3,080 | 0.42 |
+| Wait | synthesized | 1,000 | 0.71 |
 
-For more details about the FastTurn Test Set, please refer to the [FastTurn repository](https://github.com/ASLP-lab/FastTurn).
+For details, see the [FastTurn repository](https://github.com/ASLP-lab/FastTurn).
 
 ---
 
 ## Contact
 
-For questions or collaboration, please contact: [jimz@qualialabs.ai](mailto:jimz@qualialabs.ai)
+For questions or collaboration: [jimz@qualialabs.ai](mailto:jimz@qualialabs.ai)
 
 ---
 
-## 📜 License
+## License
 
-This dataset is released under the Creative Commons Attribution 4.0 International (CC-BY 4.0) License.
-
-For more details: https://creativecommons.org/licenses/by/4.0/
+Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ---
 
-## 📖 Citation
+## Citation
 
-If you use SmoothConv in your research, please cite:
+If you use SmoothConv or DuplexConv in your research, please cite:
 
-@misc{smoothconv,
-  author = {qulialabs}，title={SmoothConv: Datasets for Smooth Human–AI Conversational Interaction},
-  year={2025},publisher = {GitHub},journal = {GitHub repository},howpublished = {https://github.com/qulialabs-ethan/SmoothConv},email = {developer@qulialabs.ai}
+```bibtex
+@misc{smoothconv_duplexconv2025,
+  author       = {{ASLP@NPU} and {QualiaLabs}},
+  title        = {SmoothConv and DuplexConv: Full-Duplex Chinese Speech Datasets for Conversational AI},
+  year         = {2025},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/qualialabsAI/SmoothConv}}
 }
+```
