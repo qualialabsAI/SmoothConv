@@ -13,7 +13,7 @@
 
 This is the official repository for the **SmoothConv** and **DuplexConv** twin datasets, co-developed by **ASLP@NPU** and **QualiaLabs**.
 
-Open-source Chinese speech resources remain dominated by single-channel, scripted, or read-aloud corpora. **Large-scale, multi-channel datasets of spontaneous full-duplex dialogue**—with turn overlaps, backchannels, pauses, and real-time interruptions—are still scarce. **SmoothConv** and **DuplexConv** address this gap with **2,100 hours** of multi-party Chinese conversations in **Tutoring** and **Social Chat**, supporting turn-taking modeling, real-time interruption handling, and Speech LLM research.
+Open-source Chinese speech resources remain dominated by single-channel or scripted speech data. **Large-scale, multi-channel datasets of spontaneous full-duplex dialogue**—with turn overlaps, backchannels, pauses, and real-time interruptions—are still scarce. **SmoothConv** and **DuplexConv** address this gap with **2,100 hours** of multi-party Chinese conversations in **Tutoring** and **Social Chat**, supporting turn-taking modeling, real-time interruption handling, and Speech LLM research.
 
 <p align="center">
   <strong><a href="https://qualialabsai.github.io/SmoothConv-DuplexConv">Demo Page</a></strong> — Annotation sample videos and dataset distribution charts.
