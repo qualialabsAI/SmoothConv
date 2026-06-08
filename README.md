@@ -15,7 +15,7 @@ This is the official repository for the **SmoothConv** and **DuplexConv** twin d
 This data suite offers **2,100+ hours** of real-world, unscripted Chinese long-form conversational audio. It is specifically designed to advance research on next-generation Speech LLMs and full-duplex spoken dialogue systems—enabling models to achieve human-like turn-taking, real-time interruption handling, and continuous stream perception.
 
 <p align="center">
-  <strong>👉 <a href="https://qualialabsai.github.io/SmoothConv">Demo Page</a></strong> — Visual showcase: annotation demo videos, data distribution charts, and full-duplex use-case highlights. (Technical docs & citation remain in this README.)
+  <strong><a href="https://qualialabsai.github.io/SmoothConv">Demo Page</a></strong> — Annotation sample videos and dataset distribution for SmoothConv &amp; DuplexConv.
 </p>
 
 ---
