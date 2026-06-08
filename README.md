@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="figs/logo.png" alt="SmoothConv & DuplexConv" width="920">
+  <img src="figs/logo.png?v=2" alt="SmoothConv & DuplexConv" width="920">
 </p>
 
 # SmoothConv & DuplexConv: Large-Scale Chinese Full-Duplex Speech Datasets for Conversational AI
