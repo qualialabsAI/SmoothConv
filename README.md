@@ -1,7 +1,7 @@
-# SmoothConv & DuplexConv: Full-Duplex Chinese speech datasets for Conversational AI
+# SmoothConv & DuplexConv: Large-Scale Chinese Full-Duplex Speech Datasets for Conversational AI
 
 <p align="center">
-  <img src="figs/SD.png" alt="SmoothConv & DuplexConv" width="480">
+  <img src="figs/logo.png" alt="SmoothConv & DuplexConv" width="640">
 </p>
 
 <p align="center">
@@ -110,7 +110,7 @@ If you use SmoothConv or DuplexConv in your research, please cite:
 ```bibtex
 @misc{smoothconv_duplexconv2025,
   author       = {{ASLP@NPU} and {QualiaLabs}},
-  title        = {SmoothConv and DuplexConv: Full-Duplex Chinese Speech Datasets for Conversational AI},
+  title        = {SmoothConv and DuplexConv: Large-Scale Chinese Full-Duplex Speech Datasets for Conversational AI},
   year         = {2025},
   publisher    = {GitHub},
   howpublished = {\url{https://github.com/qualialabsAI/SmoothConv}}
